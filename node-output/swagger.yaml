@@ -1,0 +1,153 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Microservicio de Noticias y Favoritos",
+    "description" : "Un microservicio que gestiona noticias y favoritos",
+    "contact" : {
+      "name" : "Guillermo Rivas",
+      "email" : "grivasgor@gmail.com"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/GRIVASGOR/NoticiasYFav/1.0.0"
+  } ],
+  "paths" : {
+    "/noticias" : {
+      "get" : {
+        "summary" : "Obtener noticias",
+        "description" : "Obtiene una lista de noticias.",
+        "responses" : {
+          "200" : {
+            "description" : "Respuesta exitosa",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "inline_response_200" : {
+        "type" : "object",
+        "properties" : {
+          "metadata" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "date" : {
+                  "type" : "string",
+                  "description" : "Fecha de la respuesta"
+                },
+                "tipo" : {
+                  "type" : "string",
+                  "description" : "Tipo de respuesta"
+                },
+                "codigo" : {
+                  "type" : "string",
+                  "description" : "Código de respuesta"
+                }
+              }
+            }
+          },
+          "noticiasResponse" : {
+            "type" : "object",
+            "properties" : {
+              "noticia" : {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "integer"
+                  },
+                  "titulo" : {
+                    "type" : "string"
+                  },
+                  "fecha" : {
+                    "type" : "string"
+                  },
+                  "descripcion" : {
+                    "type" : "string"
+                  }
+                },
+                "description" : "Detalles de la noticia individual"
+              },
+              "noticias" : {
+                "type" : "array",
+                "description" : "Lista de noticias",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "id" : {
+                      "type" : "integer"
+                    },
+                    "titulo" : {
+                      "type" : "string"
+                    },
+                    "fecha" : {
+                      "type" : "string"
+                    },
+                    "descripcion" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "example" : {
+          "metadata" : [ {
+            "date" : "Respuesta exitosa",
+            "tipo" : "Respuesta ok",
+            "codigo" : "200"
+          } ],
+          "noticiasResponse" : {
+            "noticias" : [ {
+              "id" : 1,
+              "titulo" : "University of California and NASA Ames unveil plans for $2 billion Berkeley Space Center",
+              "fecha" : "2023-10-16T20:39:09Z",
+              "descripcion" : "The University of California, Berkeley, and the NASA Ames Research Center unveiled plans Oct. 16 for a $2 billion Berkeley Space Center at NASA Research Park."
+            }, {
+              "id" : 2,
+              "titulo" : "Space insurers take cautious approach to satellite servicing",
+              "fecha" : "2023-10-17T04:58:23.533Z",
+              "descripcion" : "Despite satellite malfunctions that are expected to lead to major insurance claims, the space insurance field is taking a cautious approach to servicing technologies that might be able to repair such spacecraft."
+            }, {
+              "id" : 3,
+              "titulo" : "Army exploring new options to tap commercial satellite networks",
+              "fecha" : "2023-10-17T04:58:38.987Z",
+              "descripcion" : "The Army wants seamless access to satellites in various orbits, so if one network goes down, others instantly take over."
+            }, {
+              "id" : 4,
+              "titulo" : "University of California and NASA Ames unveil plans for $2 billion Berkeley Space Center",
+              "fecha" : "2023-10-17T04:59:16.467Z",
+              "descripcion" : "The University of California, Berkeley, and the NASA Ames Research Center unveiled plans Oct. 16 for a $2 billion Berkeley Space Center at NASA Research Park."
+            }, {
+              "id" : 5,
+              "titulo" : "Space investors followed government contracts in the third quarter, report says",
+              "fecha" : "2023-10-17T04:59:17.452Z",
+              "descripcion" : "Investment in the space sector, especially from venture capital, is consistently flowing into companies that are pursuing and winning government contracts, according to a report Monday by New York-based Space Capital."
+            }, {
+              "id" : 6,
+              "titulo" : "After six decades, ‘Gagarin’s Start’ will meet its end as a launch pad",
+              "fecha" : "2023-10-17T04:59:18.140Z",
+              "descripcion" : "Agreement for funding from UAE fell through after Russia invaded Ukraine."
+            }, {
+              "id" : 7,
+              "titulo" : "Urban Sky raises $9.75 million for stratospheric imaging platform",
+              "fecha" : "2023-10-17T04:59:18.581Z",
+              "descripcion" : "Urban Sky, a startup offering high-resolution imaging from small stratospheric balloons, has raised $9.75 million in a Series A round."
+            } ]
+          }
+        }
+      }
+    }
+  }
+}
