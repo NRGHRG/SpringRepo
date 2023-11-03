@@ -22,7 +22,7 @@ public class Noticias {
     @Column(name = "fecha")
     private String fecha;
 
-    @Column(name = "descripcion")
+    @Column(name = "descripcion", length = 1000)
     private String descripcion;
 
 
