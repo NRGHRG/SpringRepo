@@ -13,17 +13,5 @@ public class ApirestPlataformaNoticias1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(ApirestPlataformaNoticias1Application.class, args);
 	}
-
-	/**@Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:4200"); // Reemplaza con el origen de tu aplicación Angular
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }**/
 	
 }

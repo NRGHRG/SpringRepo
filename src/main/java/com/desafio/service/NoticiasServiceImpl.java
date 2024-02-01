@@ -121,7 +121,7 @@ public class NoticiasServiceImpl implements INoticiasService {
 			return new ResponseEntity<NoticiasResponseRest>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		
-		return new ResponseEntity<NoticiasResponseRest>(response, HttpStatus.OK);  // devuelve 200
+		return new ResponseEntity<NoticiasResponseRest>(response, HttpStatus.OK);
 		
 	
 	}
