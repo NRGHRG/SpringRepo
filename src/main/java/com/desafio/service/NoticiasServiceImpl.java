@@ -102,7 +102,7 @@ public class NoticiasServiceImpl implements INoticiasService {
 
 	@Override
 	public ResponseEntity<NoticiasResponseRest> eliminar(Long id) {
-			log.info("Inicio método eliminar noticia");
+			log.info("Inicio método eliminar noticia con ID: " + id);
 		
 			NoticiasResponseRest response = new NoticiasResponseRest();
 		
